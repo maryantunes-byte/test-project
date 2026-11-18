@@ -714,10 +714,13 @@
   }
 
   /* ── Bottom Tab Bar ── */
+  /* Pinned to the bottom of the phone frame (outside the scroll area),
+     so it never depends on position: sticky */
   .tab-bar {
-    position: sticky;
+    position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
     background: rgba(255,255,255,0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1082,6 +1085,9 @@
 
     </div>
 
+
+  </div><!-- /phone-screen -->
+
     <!-- Tab Bar -->
     <nav class="tab-bar">
       <button class="tab-item active" aria-label="Início">
@@ -1102,8 +1108,6 @@
         <span>Perfil</span>
       </button>
     </nav>
-
-  </div><!-- /phone-screen -->
 </div><!-- /phone-frame -->
 
 </div>
